@@ -15,8 +15,9 @@ if [ $method = 2 ]
 then
 	echo type name of package which you want to install
 	read package 
-	sudo xbps-install -S void-repo-multilib-nonfree
-	sudo xbps-install -S void-repo-multilib
+	sudo xbps-install -Sy void-repo-multilib-nonfree
+	sudo xbps-install -Sy void-repo-multilib
+	sudo xbps-install -Sy void-repo-nonfree
 	sudo xbps-install -S $package
 fi
 if [ $method = 3 ] 
